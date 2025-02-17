@@ -13,7 +13,8 @@ class Circle(QWidget):
         painter.setRenderHint(QPainter.RenderHint.Antialiasing)
 
         for circle in self.circles:
-            painter.setBrush(QColor(255, 255, 0))
+            r, g, b = random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)
+            painter.setBrush(QColor(r, g, b))
             painter.drawEllipse(circle)
 
     def add_circle(self):
